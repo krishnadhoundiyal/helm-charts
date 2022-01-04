@@ -19,7 +19,7 @@ jobs:
         uses: helm/kind-action@v1.0.0-alpha.3
         with:
           install_local_path_provisioner: true
-        # Only build a kind cluster if there are chart changes to test.
+        # Only build a kind cluster if there are charts changes to test.
         if: steps.lint.outputs.changed == 'true'
 
       - name: Run chart-testing (install)
